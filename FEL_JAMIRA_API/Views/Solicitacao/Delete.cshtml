@@ -1,0 +1,80 @@
+﻿@model FEL_JAMIRA_WEB_API.Models.Solicitacao
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Solicitacao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estacionamento.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estacionamento.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataEntrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataEntrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataSaida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataSaida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempoEstacionamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempoEstacionamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
